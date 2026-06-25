@@ -1,2 +1,4 @@
 jdk:
   - openjdk22
+befiore_install:
+  - sdk install java 22.0.2-oracle
