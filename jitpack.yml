@@ -1,2 +1,4 @@
-befiore_install:
+jdk:
+  - openjdk25
+before_install:
   - sdk install java 22.0.2-oracle
