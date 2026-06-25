@@ -4,5 +4,5 @@ import org.jspecify.annotations.NullMarked;
     requires static java.compiler;
     requires transitive org.jspecify;
     exports org.gnome.gtk4layershell;
-    requires transitive org.javagi.gtk;
+    requires transitive org.gnome.gtk;
 }

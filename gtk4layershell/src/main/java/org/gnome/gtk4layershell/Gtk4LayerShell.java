@@ -32,9 +32,9 @@ import org.javagi.interop.Interop;
 import org.javagi.interop.Platform;
 import org.jspecify.annotations.Nullable;
 
-///
-/// Constants and functions that are declared in the global Gtk4LayerShell namespace.
-///
+/**
+ * Constants and functions that are declared in the global Gtk4LayerShell namespace.
+ */
 @Generated("org.javagi.JavaGI")
 public final class Gtk4LayerShell {
     static {
@@ -52,19 +52,19 @@ public final class Gtk4LayerShell {
     private static void registerTypes() {
     }
 
-    ///
-    /// When auto exclusive zone is enabled, exclusive zone is automatically set to the
-    /// size of the `window` + relevant margin. To disable auto exclusive zone, just set the
-    /// exclusive zone to 0 or any other fixed value.
-    ///
-    /// NOTE: you can control the auto exclusive zone by changing the margin on the non-anchored
-    /// edge. This behavior is specific to gtk4-layer-shell and not part of the underlying protocol
-    ///
-    /// @param window A layer surface.
-    ///
+    /**
+     * When auto exclusive zone is enabled, exclusive zone is automatically set to the
+     * size of the {@code window} + relevant margin. To disable auto exclusive zone, just set the
+     * exclusive zone to 0 or any other fixed value.
+     * <p>
+     * NOTE: you can control the auto exclusive zone by changing the margin on the non-anchored
+     * edge. This behavior is specific to gtk4-layer-shell and not part of the underlying protocol
+     *
+     * @param window A layer surface.
+     */
     public static void autoExclusiveZoneEnable(Window window) {
         try {
-            NativeHandles.gtk_layer_auto_exclusive_zone_enable.invokeExact(
+            MethodHandles.gtk_layer_auto_exclusive_zone_enable.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -74,7 +74,7 @@ public final class Gtk4LayerShell {
     public static boolean autoExclusiveZoneIsEnabled(Window window) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_auto_exclusive_zone_is_enabled.invokeExact(
+            _result = (int) MethodHandles.gtk_layer_auto_exclusive_zone_is_enabled.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -86,8 +86,8 @@ public final class Gtk4LayerShell {
     public static boolean getAnchor(Window window, Edge edge) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_anchor.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            _result = (int) MethodHandles.gtk_layer_get_anchor.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     edge.getValue());
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -99,7 +99,7 @@ public final class Gtk4LayerShell {
     public static int getExclusiveZone(Window window) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_exclusive_zone.invokeExact(
+            _result = (int) MethodHandles.gtk_layer_get_exclusive_zone.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -111,7 +111,7 @@ public final class Gtk4LayerShell {
     public static KeyboardMode getKeyboardMode(Window window) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_keyboard_mode.invokeExact(
+            _result = (int) MethodHandles.gtk_layer_get_keyboard_mode.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -123,7 +123,7 @@ public final class Gtk4LayerShell {
     public static Layer getLayer(Window window) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_layer.invokeExact(
+            _result = (int) MethodHandles.gtk_layer_get_layer.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -135,7 +135,7 @@ public final class Gtk4LayerShell {
     public static int getMajorVersion() {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_major_version.invokeExact();
+            _result = (int) MethodHandles.gtk_layer_get_major_version.invokeExact();
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
@@ -146,8 +146,8 @@ public final class Gtk4LayerShell {
     public static int getMargin(Window window, Edge edge) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_margin.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            _result = (int) MethodHandles.gtk_layer_get_margin.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     edge.getValue());
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -159,7 +159,7 @@ public final class Gtk4LayerShell {
     public static int getMicroVersion() {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_micro_version.invokeExact();
+            _result = (int) MethodHandles.gtk_layer_get_micro_version.invokeExact();
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
@@ -170,7 +170,7 @@ public final class Gtk4LayerShell {
     public static int getMinorVersion() {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_minor_version.invokeExact();
+            _result = (int) MethodHandles.gtk_layer_get_minor_version.invokeExact();
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
@@ -178,17 +178,17 @@ public final class Gtk4LayerShell {
         return _returnValue;
     }
 
-    ///
-    /// NOTE: To get which monitor the surface is actually on, use
-    /// gdk_display_get_monitor_at_surface().
-    ///
-    /// @param window A layer surface.
-    /// @return the monitor this surface will/has requested to be on.
-    ///
+    /**
+     * NOTE: To get which monitor the surface is actually on, use
+     * gdk_display_get_monitor_at_surface().
+     *
+     * @param window A layer surface.
+     * @return the monitor this surface will/has requested to be on.
+     */
     public static @Nullable Monitor getMonitor(Window window) {
         MemorySegment _result;
         try {
-            _result = (MemorySegment) NativeHandles.gtk_layer_get_monitor.invokeExact(
+            _result = (MemorySegment) MethodHandles.gtk_layer_get_monitor.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -196,23 +196,23 @@ public final class Gtk4LayerShell {
         if (_result == null || _result.equals(MemorySegment.NULL)) {
             return null;
         }
-        InstanceCache.refOnce(_result);
-        Monitor _returnValue = (Monitor) InstanceCache.get(_result, Monitor::new);
+        Monitor _returnValue = (Monitor) InstanceCache.getForType(_result, Monitor::new);
+        if (_returnValue != null) _returnValue.ref();
         return _returnValue;
     }
 
-    ///
-    /// NOTE: this function does not return ownership of the string. Do not free the returned string.
-    /// Future calls into the library may invalidate the returned string.
-    ///
-    /// @param window A layer surface.
-    /// @return a reference to the namespace property. If namespace is unset, returns the
-    /// default namespace("gtk4-layer-shell"). Never returns `null`.
-    ///
+    /**
+     * NOTE: this function does not return ownership of the string. Do not free the returned string.
+     * Future calls into the library may invalidate the returned string.
+     *
+     * @param window A layer surface.
+     * @return a reference to the namespace property. If namespace is unset, returns the
+     * default namespace("gtk4-layer-shell"). Never returns {@code null}.
+     */
     public static String getNamespace(Window window) {
         MemorySegment _result;
         try {
-            _result = (MemorySegment) NativeHandles.gtk_layer_get_namespace.invokeExact(
+            _result = (MemorySegment) MethodHandles.gtk_layer_get_namespace.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -220,20 +220,20 @@ public final class Gtk4LayerShell {
         if (_result == null || _result.equals(MemorySegment.NULL)) {
             return null;
         }
-        String _returnValue = Interop.getString(_result, TransferOwnership.NONE);
+        String _returnValue = Interop.getStringFrom(_result, TransferOwnership.NONE);
         return _returnValue;
     }
 
-    ///
-    /// May block for a Wayland roundtrip the first time it's called.
-    ///
-    /// @return version of the zwlr_layer_shell_v1 protocol supported by the
-    /// compositor or 0 if the protocol is not supported.
-    ///
+    /**
+     * May block for a Wayland roundtrip the first time it's called.
+     *
+     * @return version of the zwlr_layer_shell_v1 protocol supported by the
+     * compositor or 0 if the protocol is not supported.
+     */
     public static int getProtocolVersion() {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_protocol_version.invokeExact();
+            _result = (int) MethodHandles.gtk_layer_get_protocol_version.invokeExact();
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
@@ -244,7 +244,7 @@ public final class Gtk4LayerShell {
     public static boolean getRespectClose(Window window) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_get_respect_close.invokeExact(
+            _result = (int) MethodHandles.gtk_layer_get_respect_close.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -256,7 +256,7 @@ public final class Gtk4LayerShell {
     public static @Nullable MemorySegment getZwlrLayerSurfaceV1(Window window) {
         MemorySegment _result;
         try {
-            _result = (MemorySegment) NativeHandles.gtk_layer_get_zwlr_layer_surface_v1.invokeExact(
+            _result = (MemorySegment) MethodHandles.gtk_layer_get_zwlr_layer_surface_v1.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -268,15 +268,15 @@ public final class Gtk4LayerShell {
         return _returnValue;
     }
 
-    ///
-    /// Set the `window` up to be a layer surface once it is mapped. this must be called before
-    /// the `window` is realized.
-    ///
-    /// @param window A `GtkWindow` to be turned into a layer surface.
-    ///
+    /**
+     * Set the {@code window} up to be a layer surface once it is mapped. this must be called before
+     * the {@code window} is realized.
+     *
+     * @param window A {@code GtkWindow} to be turned into a layer surface.
+     */
     public static void initForWindow(Window window) {
         try {
-            NativeHandles.gtk_layer_init_for_window.invokeExact(
+            MethodHandles.gtk_layer_init_for_window.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -286,7 +286,7 @@ public final class Gtk4LayerShell {
     public static boolean isLayerWindow(Window window) {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_is_layer_window.invokeExact(
+            _result = (int) MethodHandles.gtk_layer_is_layer_window.invokeExact(
                     (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
@@ -295,16 +295,16 @@ public final class Gtk4LayerShell {
         return _returnValue;
     }
 
-    ///
-    /// May block for a Wayland roundtrip the first time it's called.
-    ///
-    /// @return `true` if the platform is Wayland and Wayland compositor supports the
-    /// zwlr_layer_shell_v1 protocol.
-    ///
+    /**
+     * May block for a Wayland roundtrip the first time it's called.
+     *
+     * @return {@code true} if the platform is Wayland and Wayland compositor supports the
+     * zwlr_layer_shell_v1 protocol.
+     */
     public static boolean isSupported() {
         int _result;
         try {
-            _result = (int) NativeHandles.gtk_layer_is_supported.invokeExact();
+            _result = (int) MethodHandles.gtk_layer_is_supported.invokeExact();
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
@@ -312,175 +312,177 @@ public final class Gtk4LayerShell {
         return _returnValue;
     }
 
-    ///
-    /// Set whether `window` should be anchored to `edge.`
-    /// - If two perpendicular edges are anchored, the surface with be anchored to that corner
-    /// - If two opposite edges are anchored, the window will be stretched across the screen in that direction
-    ///
-    /// Default is `false` for each `GtkLayerShellEdge`
-    ///
-    /// @param window A layer surface.
-    /// @param edge A `GtkLayerShellEdge` this layer surface may be anchored to.
-    /// @param anchorToEdge Whether or not to anchor this layer surface to `edge.`
-    ///
+    /**
+     * Set whether {@code window} should be anchored to {@code edge.}
+     * <ul>
+     * <li>If two perpendicular edges are anchored, the surface with be anchored to that corner
+     * <li>If two opposite edges are anchored, the window will be stretched across the screen in that direction
+     * </ul>
+     * <p>
+     * Default is {@code false} for each {@code GtkLayerShellEdge}
+     *
+     * @param window A layer surface.
+     * @param edge A {@code GtkLayerShellEdge} this layer surface may be anchored to.
+     * @param anchorToEdge Whether or not to anchor this layer surface to {@code edge.}
+     */
     public static void setAnchor(Window window, Edge edge, boolean anchorToEdge) {
         try {
-            NativeHandles.gtk_layer_set_anchor.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            MethodHandles.gtk_layer_set_anchor.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     edge.getValue(), anchorToEdge ? 1 : 0);
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
     }
 
-    ///
-    /// Has no effect unless the surface is anchored to an edge. Requests that the compositor
-    /// does not place other surfaces within the given exclusive zone of the anchored edge.
-    /// For example, a panel can request to not be covered by maximized windows. See
-    /// wlr-layer-shell-unstable-v1.xml for details.
-    ///
-    /// Default is 0
-    ///
-    /// @param window A layer surface.
-    /// @param exclusiveZone The size of the exclusive zone.
-    ///
+    /**
+     * Has no effect unless the surface is anchored to an edge. Requests that the compositor
+     * does not place other surfaces within the given exclusive zone of the anchored edge.
+     * For example, a panel can request to not be covered by maximized windows. See
+     * wlr-layer-shell-unstable-v1.xml for details.
+     * <p>
+     * Default is 0
+     *
+     * @param window A layer surface.
+     * @param exclusiveZone The size of the exclusive zone.
+     */
     public static void setExclusiveZone(Window window, int exclusiveZone) {
         try {
-            NativeHandles.gtk_layer_set_exclusive_zone.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            MethodHandles.gtk_layer_set_exclusive_zone.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     exclusiveZone);
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
     }
 
-    ///
-    /// Sets if/when `window` should receive keyboard events from the compositor, see
-    /// GtkLayerShellKeyboardMode for details. To control mouse/touch interactivity use input regions,
-    /// see [#61](https://github.com/wmww/gtk4-layer-shell/issues/61) for details.
-    ///
-    /// Default is [org.gnome.gtk4layershell.KeyboardMode#NONE]
-    ///
-    /// @param window A layer surface.
-    /// @param mode The type of keyboard interactivity requested.
-    ///
+    /**
+     * Sets if/when {@code window} should receive keyboard events from the compositor, see
+     * GtkLayerShellKeyboardMode for details. To control mouse/touch interactivity use input regions,
+     * see <a href="https://github.com/wmww/gtk4-layer-shell/issues/61">#61</a> for details.
+     * <p>
+     * Default is {@link org.gnome.gtk4layershell.KeyboardMode#NONE}
+     *
+     * @param window A layer surface.
+     * @param mode The type of keyboard interactivity requested.
+     */
     public static void setKeyboardMode(Window window, KeyboardMode mode) {
         try {
-            NativeHandles.gtk_layer_set_keyboard_mode.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            MethodHandles.gtk_layer_set_keyboard_mode.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     mode.getValue());
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
     }
 
-    ///
-    /// Set the "layer" on which the surface appears(controls if it is over top of or below other surfaces). The layer may
-    /// be changed on-the-fly in the current version of the layer shell protocol, but on compositors that only support an
-    /// older version the `window` is remapped so the change can take effect.
-    ///
-    /// Default is [org.gnome.gtk4layershell.Layer#TOP]
-    ///
-    /// @param window A layer surface.
-    /// @param layer The layer on which this surface appears.
-    ///
+    /**
+     * Set the "layer" on which the surface appears(controls if it is over top of or below other surfaces). The layer may
+     * be changed on-the-fly in the current version of the layer shell protocol, but on compositors that only support an
+     * older version the {@code window} is remapped so the change can take effect.
+     * <p>
+     * Default is {@link org.gnome.gtk4layershell.Layer#TOP}
+     *
+     * @param window A layer surface.
+     * @param layer The layer on which this surface appears.
+     */
     public static void setLayer(Window window, Layer layer) {
         try {
-            NativeHandles.gtk_layer_set_layer.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            MethodHandles.gtk_layer_set_layer.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     layer.getValue());
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
     }
 
-    ///
-    /// Set the margin for a specific `edge` of a `window.` Effects both surface's distance from
-    /// the edge and its exclusive zone size(if auto exclusive zone enabled).
-    ///
-    /// Default is 0 for each `GtkLayerShellEdge`
-    ///
-    /// @param window A layer surface.
-    /// @param edge The `GtkLayerShellEdge` for which to set the margin.
-    /// @param marginSize The margin for `edge` to be set.
-    ///
+    /**
+     * Set the margin for a specific {@code edge} of a {@code window.} Effects both surface's distance from
+     * the edge and its exclusive zone size(if auto exclusive zone enabled).
+     * <p>
+     * Default is 0 for each {@code GtkLayerShellEdge}
+     *
+     * @param window A layer surface.
+     * @param edge The {@code GtkLayerShellEdge} for which to set the margin.
+     * @param marginSize The margin for {@code edge} to be set.
+     */
     public static void setMargin(Window window, Edge edge, int marginSize) {
         try {
-            NativeHandles.gtk_layer_set_margin.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            MethodHandles.gtk_layer_set_margin.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     edge.getValue(), marginSize);
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
     }
 
-    ///
-    /// Set the output for the window to be placed on, or `null` to let the compositor choose.
-    /// If the window is currently mapped, it will get remapped so the change can take effect.
-    ///
-    /// Default is `null`
-    ///
-    /// @param window A layer surface.
-    /// @param monitor The output this layer surface will be placed on (`null` to let the compositor decide).
-    ///
+    /**
+     * Set the output for the window to be placed on, or {@code null} to let the compositor choose.
+     * If the window is currently mapped, it will get remapped so the change can take effect.
+     * <p>
+     * Default is {@code null}
+     *
+     * @param window A layer surface.
+     * @param monitor The output this layer surface will be placed on ({@code null} to let the compositor decide).
+     */
     public static void setMonitor(Window window, @Nullable Monitor monitor) {
         try {
-            NativeHandles.gtk_layer_set_monitor.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            MethodHandles.gtk_layer_set_monitor.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     (MemorySegment) (monitor == null ? MemorySegment.NULL : monitor.handle()));
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
     }
 
-    ///
-    /// Set the "namespace" of the surface.
-    ///
-    /// No one is quite sure what this is for, but it probably should be something generic
-    /// ("panel", "osk", etc). The `nameSpace` string is copied, and caller maintains
-    /// ownership of original. If the window is currently mapped, it will get remapped so
-    /// the change can take effect.
-    ///
-    /// Default is "gtk4-layer-shell" (which will be used if set to `null`)
-    ///
-    /// @param window A layer surface.
-    /// @param nameSpace The namespace of this layer surface.
-    ///
+    /**
+     * Set the "namespace" of the surface.
+     * <p>
+     * No one is quite sure what this is for, but it probably should be something generic
+     * ("panel", "osk", etc). The {@code nameSpace} string is copied, and caller maintains
+     * ownership of original. If the window is currently mapped, it will get remapped so
+     * the change can take effect.
+     * <p>
+     * Default is "gtk4-layer-shell" (which will be used if set to {@code null})
+     *
+     * @param window A layer surface.
+     * @param nameSpace The namespace of this layer surface.
+     */
     public static void setNamespace(Window window, @Nullable String nameSpace) {
         try (var _arena = Arena.ofConfined()) {
             try {
-                NativeHandles.gtk_layer_set_namespace.invokeExact(
-                        (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
-                        (MemorySegment) (nameSpace == null ? MemorySegment.NULL : Interop.allocate(nameSpace, _arena)));
+                MethodHandles.gtk_layer_set_namespace.invokeExact(
+                        (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
+                        (MemorySegment) (nameSpace == null ? MemorySegment.NULL : Interop.allocateNativeString(nameSpace, _arena)));
             } catch (Throwable _err) {
                 throw new AssertionError(_err);
             }
         }
     }
 
-    ///
-    /// Compositors may send the `zwlr_layer_surface_v1.closed` event in some cases (such as
-    /// when an output is destroyed). Prior to v1.3 this always triggered a GTK `close-request`
-    /// signal, which would destroy the window if not intercepted by application code. In v1.3+
-    /// this behavior is disabled by default, and can be turned back on by calling this
-    /// function with `true`. To handle the `.closed` event without destroying your window
-    /// turn respect_close on and connect a `close-request` listener that returns `true`.
-    ///
-    /// @param window A layer surface.
-    /// @param respectClose If to forward the .closed event to GTK.
-    /// @since 1.3
-    ///
+    /**
+     * Compositors may send the {@code zwlr_layer_surface_v1.closed} event in some cases (such as
+     * when an output is destroyed). Prior to v1.3 this always triggered a GTK {@code close-request}
+     * signal, which would destroy the window if not intercepted by application code. In v1.3+
+     * this behavior is disabled by default, and can be turned back on by calling this
+     * function with {@code true}. To handle the {@code .closed} event without destroying your window
+     * turn respect_close on and connect a {@code close-request} listener that returns {@code true}.
+     *
+     * @param window A layer surface.
+     * @param respectClose If to forward the .closed event to GTK.
+     * @since 1.3
+     */
     public static void setRespectClose(Window window, boolean respectClose) {
         try {
-            NativeHandles.gtk_layer_set_respect_close.invokeExact(
-                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()),
+            MethodHandles.gtk_layer_set_respect_close.invokeExact(
+                    (MemorySegment) (window == null ? MemorySegment.NULL : window.handle()), 
                     respectClose ? 1 : 0);
         } catch (Throwable _err) {
             throw new AssertionError(_err);
         }
     }
 
-    private static final class NativeHandles {
+    private static final class MethodHandles {
         static final MethodHandle gtk_layer_auto_exclusive_zone_enable = Interop.downcallHandle(
                 "gtk_layer_auto_exclusive_zone_enable",
                 FunctionDescriptor.ofVoid(ValueLayout.ADDRESS), false);

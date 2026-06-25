@@ -25,30 +25,30 @@ import org.javagi.base.Enumeration;
 
 @Generated("org.javagi.JavaGI")
 public enum Edge implements Enumeration {
-    ///
-    /// The left edge of the screen.
-    ///
+    /**
+     * The left edge of the screen.
+     */
     LEFT(0),
 
-    ///
-    /// The right edge of the screen.
-    ///
+    /**
+     * The right edge of the screen.
+     */
     RIGHT(1),
 
-    ///
-    /// The top edge of the screen.
-    ///
+    /**
+     * The top edge of the screen.
+     */
     TOP(2),
 
-    ///
-    /// The bottom edge of the screen.
-    ///
+    /**
+     * The bottom edge of the screen.
+     */
     BOTTOM(3),
 
-    ///
-    /// Should not be used except to get the number of entries. (NOTE: may change in
-    /// future releases as more entries are added)
-    ///
+    /**
+     * Should not be used except to get the number of entries. (NOTE: may change in
+     * future releases as more entries are added)
+     */
     ENTRY_NUMBER(4);
 
     static {
@@ -57,21 +57,21 @@ public enum Edge implements Enumeration {
 
     private final int value;
 
-    ///
-    /// Create a new Edge for the provided value
-    ///
-    /// @param value the enum value
-    ///
+    /**
+     * Create a new Edge for the provided value
+     *
+     * @param value the enum value
+     */
     private Edge(int value) {
         this.value = value;
     }
 
-    ///
-    /// Create a new Edge for the provided value
-    ///
-    /// @param value the enum value
-    /// @return the enum for the provided value
-    ///
+    /**
+     * Create a new Edge for the provided value
+     *
+     * @param value the enum value
+     * @return the enum for the provided value
+     */
     public static Edge of(int value) {
         return switch(value) {
             case 0 -> LEFT;
@@ -83,22 +83,22 @@ public enum Edge implements Enumeration {
         } ;
     }
 
-    ///
-    /// Get the numeric value of this enum
-    ///
-    /// @return the enum value
-    ///
+    /**
+     * Get the numeric value of this enum
+     *
+     * @return the enum value
+     */
     @Override
     public int getValue() {
         return value;
     }
 
-    ///
-    /// Create a new Edge for the value in the provided memory address.
-    ///
-    /// @param address the memory address holding a enum value
-    /// @return the enum for the value in the provided memory address
-    ///
+    /**
+     * Create a new Edge for the value in the provided memory address.
+     *
+     * @param address the memory address holding a enum value
+     * @return the enum for the value in the provided memory address
+     */
     public static Edge of(MemorySegment address) {
         return of((int) address.address());
     }

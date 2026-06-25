@@ -8,12 +8,11 @@ repositories {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+        languageVersion = JavaLanguageVersion.of(22)
     }
-    withSourcesJar()
-    withJavadocJar()
 }
 
 dependencies {
-    api("org.java-gi:gtk:1.0.0-RC1")
+    implementation("org.jspecify:jspecify:1.0.0")
+    api("org.java-gi:gtk:0.14.1")
 }

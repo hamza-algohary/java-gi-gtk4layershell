@@ -25,26 +25,26 @@ import org.javagi.base.Enumeration;
 
 @Generated("org.javagi.JavaGI")
 public enum KeyboardMode implements Enumeration {
-    ///
-    /// This window should not receive keyboard events.
-    ///
+    /**
+     * This window should not receive keyboard events.
+     */
     NONE(0),
 
-    ///
-    /// This window should have exclusive focus if it is on the top or overlay layer.
-    ///
+    /**
+     * This window should have exclusive focus if it is on the top or overlay layer.
+     */
     EXCLUSIVE(1),
 
-    ///
-    /// The user should be able to focus and unfocues this window in an implementation
-    /// defined way. Not supported for protocol version < 4.
-    ///
+    /**
+     * The user should be able to focus and unfocues this window in an implementation
+     * defined way. Not supported for protocol version &lt; 4.
+     */
     ON_DEMAND(2),
 
-    ///
-    /// Should not be used except to get the number of entries. (NOTE: may change in
-    /// future releases as more entries are added)
-    ///
+    /**
+     * Should not be used except to get the number of entries. (NOTE: may change in
+     * future releases as more entries are added)
+     */
     ENTRY_NUMBER(3);
 
     static {
@@ -53,21 +53,21 @@ public enum KeyboardMode implements Enumeration {
 
     private final int value;
 
-    ///
-    /// Create a new KeyboardMode for the provided value
-    ///
-    /// @param value the enum value
-    ///
+    /**
+     * Create a new KeyboardMode for the provided value
+     *
+     * @param value the enum value
+     */
     private KeyboardMode(int value) {
         this.value = value;
     }
 
-    ///
-    /// Create a new KeyboardMode for the provided value
-    ///
-    /// @param value the enum value
-    /// @return the enum for the provided value
-    ///
+    /**
+     * Create a new KeyboardMode for the provided value
+     *
+     * @param value the enum value
+     * @return the enum for the provided value
+     */
     public static KeyboardMode of(int value) {
         return switch(value) {
             case 0 -> NONE;
@@ -78,22 +78,22 @@ public enum KeyboardMode implements Enumeration {
         } ;
     }
 
-    ///
-    /// Get the numeric value of this enum
-    ///
-    /// @return the enum value
-    ///
+    /**
+     * Get the numeric value of this enum
+     *
+     * @return the enum value
+     */
     @Override
     public int getValue() {
         return value;
     }
 
-    ///
-    /// Create a new KeyboardMode for the value in the provided memory address.
-    ///
-    /// @param address the memory address holding a enum value
-    /// @return the enum for the value in the provided memory address
-    ///
+    /**
+     * Create a new KeyboardMode for the value in the provided memory address.
+     *
+     * @param address the memory address holding a enum value
+     * @return the enum for the value in the provided memory address
+     */
     public static KeyboardMode of(MemorySegment address) {
         return of((int) address.address());
     }

@@ -25,30 +25,30 @@ import org.javagi.base.Enumeration;
 
 @Generated("org.javagi.JavaGI")
 public enum Layer implements Enumeration {
-    ///
-    /// The background layer.
-    ///
+    /**
+     * The background layer.
+     */
     BACKGROUND(0),
 
-    ///
-    /// The bottom layer.
-    ///
+    /**
+     * The bottom layer.
+     */
     BOTTOM(1),
 
-    ///
-    /// The top layer.
-    ///
+    /**
+     * The top layer.
+     */
     TOP(2),
 
-    ///
-    /// The overlay layer.
-    ///
+    /**
+     * The overlay layer.
+     */
     OVERLAY(3),
 
-    ///
-    /// Should not be used except to get the number of entries. (NOTE: may change in
-    /// future releases as more entries are added)
-    ///
+    /**
+     * Should not be used except to get the number of entries. (NOTE: may change in
+     * future releases as more entries are added)
+     */
     ENTRY_NUMBER(4);
 
     static {
@@ -57,21 +57,21 @@ public enum Layer implements Enumeration {
 
     private final int value;
 
-    ///
-    /// Create a new Layer for the provided value
-    ///
-    /// @param value the enum value
-    ///
+    /**
+     * Create a new Layer for the provided value
+     *
+     * @param value the enum value
+     */
     private Layer(int value) {
         this.value = value;
     }
 
-    ///
-    /// Create a new Layer for the provided value
-    ///
-    /// @param value the enum value
-    /// @return the enum for the provided value
-    ///
+    /**
+     * Create a new Layer for the provided value
+     *
+     * @param value the enum value
+     * @return the enum for the provided value
+     */
     public static Layer of(int value) {
         return switch(value) {
             case 0 -> BACKGROUND;
@@ -83,22 +83,22 @@ public enum Layer implements Enumeration {
         } ;
     }
 
-    ///
-    /// Get the numeric value of this enum
-    ///
-    /// @return the enum value
-    ///
+    /**
+     * Get the numeric value of this enum
+     *
+     * @return the enum value
+     */
     @Override
     public int getValue() {
         return value;
     }
 
-    ///
-    /// Create a new Layer for the value in the provided memory address.
-    ///
-    /// @param address the memory address holding a enum value
-    /// @return the enum for the value in the provided memory address
-    ///
+    /**
+     * Create a new Layer for the value in the provided memory address.
+     *
+     * @param address the memory address holding a enum value
+     * @return the enum for the value in the provided memory address
+     */
     public static Layer of(MemorySegment address) {
         return of((int) address.address());
     }
