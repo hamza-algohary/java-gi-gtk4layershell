@@ -1,0 +1,17 @@
+plugins {
+    id("java-library")
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+dependencies {
+    api("org.java-gi:gtk:1.0.0-RC1")
+}
