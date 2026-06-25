@@ -1,5 +1,2 @@
 jdk:
   - openjdk25
-
-before_install:
-  - ./gradlew javadoc

@@ -9,3 +9,5 @@ build
 
 gir
 tmp
+
+gtk4layershell/bin
