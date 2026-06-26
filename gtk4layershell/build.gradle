@@ -13,6 +13,6 @@ java {
 }
 
 dependencies {
-    implementation("org.jspecify:jspecify:1.0.0")
-    api("org.java-gi:gtk:0.14.1")
+    compileOnly("org.jetbrains:annotations:26.0.1")
+    api("io.github.jwharm.javagi:gtk:0.12.2")
 }

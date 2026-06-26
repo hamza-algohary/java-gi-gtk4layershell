@@ -1,8 +1,6 @@
-import org.jspecify.annotations.NullMarked;
-
-@NullMarked module org.gnome.gtk4layershell {
+module org.gnome.gtk4layershell {
     requires static java.compiler;
-    requires transitive org.jspecify;
-    exports org.gnome.gtk4layershell;
+    requires static org.jetbrains.annotations;
     requires transitive org.gnome.gtk;
+    exports org.gnome.gtk4layershell;
 }
